@@ -10,7 +10,7 @@ load_dotenv()
 # ここにご自身のAPIキーを入力してください！
 # os.environ["OPENAI_API_KEY"]
 
-OPENAI_API_KEY = st.secrets["OpenAiApiKey"]["key"]
+OPENAI_API_KEY = st.secrets['OpenAiApiKey']['main_APIKey']
 
 # openAIの機能をclientに代入
 client = OpenAI()
