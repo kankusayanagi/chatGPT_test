@@ -6,11 +6,11 @@ load_dotenv()
 
 # アクセスの為のキーをos.environ["OPENAI_API_KEY"]に代入し、設定
 
-# import os # OSが持つ環境変数OPENAI_API_KEYにAPIを入力するためにosにアクセスするためのライブラリをインポート
+import os # OSが持つ環境変数OPENAI_API_KEYにAPIを入力するためにosにアクセスするためのライブラリをインポート
 # ここにご自身のAPIキーを入力してください！
 # os.environ["OPENAI_API_KEY"]
 
-OPENAI_API_KEY = st.secrets['OpenAiApiKey']['main_APIKey']
+API_KEY = os.getenv("OPENAI_API_KEY")
 
 # openAIの機能をclientに代入
 client = OpenAI()
